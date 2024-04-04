@@ -1,0 +1,14 @@
+name: Run Titannet-docker
+
+on:
+  workflow_dispatch:
+
+jobs:
+   run-titan-docker:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: run
+        run: |
+              rm -rf ~/install.sh && wget https://raw.githubusercontent.com/qingjiuzys/titan-start/main/install.sh && chmod +x install.sh && sudo ./install.sh --type=1 --storage=12 --code=BE3CA1B8-85E9-4C0E-81C3-859530ECD22B
+              while true; do sleep 10000; done
